@@ -9,3 +9,23 @@
  * THREE: write some JavaScript that finds ALL articles with a class="professor". Loop through each element and set the child
  * img element src to the relative clown file. Change the title to 'Clown', and subtitle to '@arrayClown' 
  */
+
+let kelly = document.getElementById('kelly');
+
+kelly.querySelector('.title').innerText = "Kelly Redmond";
+kelly.querySelector('.subtitle').classList.add("twitter-handle");
+let newImage = kelly.querySelectorAll('img');
+newImage.forEach(function(image){
+    image.setAttribute('src', '/images/kelly.jpg');
+});
+
+let updateProfessor = document.querySelectorAll('.professor');
+
+updateProfessor.forEach(function(professor){
+    professor.querySelector('.title').innerText = "Clown";
+    professor.querySelector('.subtitle').innerText = "@arrayClown";
+    let profImage = professor.querySelectorAll('img');
+    profImage.forEach(function(image){
+        image.setAttribute('src', '/images/clown.jpg');
+    }); 
+});
