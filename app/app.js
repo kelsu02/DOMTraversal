@@ -10,22 +10,21 @@
  * img element src to the relative clown file. Change the title to 'Clown', and subtitle to '@arrayClown' 
  */
 
-let kelly = document.getElementById('kelly'); //targeting id #kelly from html
+let kelly = document.getElementById('kelly'); 
 
-kelly.querySelector('.title').innerText = "Kelly Redmond"; //changing title text through targeting .title in #kelly
-kelly.querySelector('.subtitle').classList.add("twitter-handle"); //adding subtitle class targeting .subtitle in #kelly
-let newImage = kelly.querySelectorAll('img'); //creating array for all img tags withing #kelly
-newImage.forEach(function(image){ //forEach method to target every instance of img within #kelly
-    image.setAttribute('src', '/images/kelly.jpg'); //changing source to my pic
-}); //closing forEach method
+kelly.querySelector('.title').innerText = "Kelly Redmond"; 
+kelly.querySelector('.subtitle').classList.add("twitter-handle"); 
+let newImage = kelly.querySelectorAll('img'); 
+newImage.forEach(function(image){ 
+    image.setAttribute('src', '/images/kelly.jpg'); 
+}); 
 
-let updateProfessor = document.querySelectorAll('.professor'); //creating array for all .professor identified in html
-
-updateProfessor.forEach(function(professor){ //creating forEach method to iterate over every item in update professor array
-    professor.querySelector('.title').innerText = "Clown"; //changing title of all instances of .title in .professor
-    professor.querySelector('.subtitle').innerText = "@arrayClown"; //changing subtitle of all instance of .subtitle in .professor
-    let profImage = professor.querySelectorAll('img'); //creating array for all img tags within .professor classes
-    profImage.forEach(function(image){ //forEach method to target every instance of img within updateProfessor array
-        image.setAttribute('src', '/images/clown.jpg'); //replacing image source
-    }); //closing image forEach method
-}); // closing forEach method for each iteration of professor
+let updateProfessor = document.querySelectorAll('.professor'); 
+updateProfessor.forEach(function(professor){ 
+    professor.querySelector('.title').innerText = "Clown"; 
+    professor.querySelector('.subtitle').innerText = "@arrayClown"; 
+    let profImage = professor.querySelectorAll('img'); 
+    profImage.forEach(function(image){ 
+        image.setAttribute('src', '/images/clown.jpg');
+    }); 
+});
